@@ -26,18 +26,11 @@ namespace Biblioteca.Models
                 emprestimo.LivroId = e.LivroId;
                 emprestimo.DataEmprestimo = e.DataEmprestimo;
                 emprestimo.DataDevolucao = e.DataDevolucao;
+                emprestimo.Devolvido = e.Devolvido;
 
                 bc.SaveChanges();
             }
         }
-
-        // public ICollection<Emprestimo> ListarTodos(FiltrosEmprestimos filtro)
-        // {
-        //     using(BibliotecaContext bc = new BibliotecaContext())
-        //     {
-        //         return bc.Emprestimos.Include(e => e.Livro).ToList();
-        //     }
-        // }
 
         public ICollection<Emprestimo> ListarTodos(FiltrosEmprestimos filtro = null)
                 {
