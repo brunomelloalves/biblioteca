@@ -35,19 +35,6 @@ namespace Biblioteca.Controllers
             return RedirectToAction("Listagem");
         }
 
-        // public IActionResult Listagem(string tipoFiltro, string filtro)
-        // {
-        //     FiltrosEmprestimos objFiltro = null;
-        //     if(!string.IsNullOrEmpty(filtro))
-        //     {
-        //         objFiltro = new FiltrosEmprestimos();
-        //         objFiltro.Filtro = filtro;
-        //         objFiltro.TipoFiltro = tipoFiltro;
-        //     }
-        //     EmprestimoService emprestimoService = new EmprestimoService();
-        //     return View(emprestimoService.ListarTodos(objFiltro));
-        // }
-
           public IActionResult Listagem(string tipoFiltro, string filtro)
         {
             // Autenticacao.CheckLogin(this);
