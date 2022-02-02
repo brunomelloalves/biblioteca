@@ -41,7 +41,7 @@ namespace Biblioteca.Models
                         if(filtro != null)
                         {
                             //definindo dinamicamente a filtragem
-                            switch(filtro.TipoFiltro)
+                            switch(filtro.TipoFiltro) 
                             {
                                 case "Usuario":
                                     query = bc.Emprestimos.Where(e => e.NomeUsuario.Contains(filtro.Filtro));
@@ -64,8 +64,9 @@ namespace Biblioteca.Models
                             // caso filtro não tenha sido informado
                             query = bc.Emprestimos;
                         }
-                     
-                        return query.Include(e => e.Livro).ToList();
+                        // return bc.Emprestimos.OrderBy(e => e.DataDevolucao).ToList();
+                        return query.Include(e => e.Livro).OrderByDescending(e => e.DataDevolucao).ToList();
+                        //return query.Include(e => e.Livro).ToList();
                     }
                 }
         public Emprestimo ObterPorId(int id)
