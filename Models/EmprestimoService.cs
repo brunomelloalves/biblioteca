@@ -32,7 +32,7 @@ namespace Biblioteca.Models
             }
         }
 
-        public ICollection<Emprestimo> ListarTodos(FiltrosEmprestimos filtro = null)
+        public List<Emprestimo> ListarTodos(FiltrosEmprestimos filtro = null)
                 {
                     using(BibliotecaContext bc = new BibliotecaContext())
                     {
@@ -64,9 +64,9 @@ namespace Biblioteca.Models
                             // caso filtro não tenha sido informado
                             query = bc.Emprestimos;
                         }
-                        // return bc.Emprestimos.OrderBy(e => e.DataDevolucao).ToList();
+                            //retornando a lista e ordenando por data de devolução em ordem decrecente
                         return query.Include(e => e.Livro).OrderByDescending(e => e.DataDevolucao).ToList();
-                        //return query.Include(e => e.Livro).ToList();
+                        
                     }
                 }
         public Emprestimo ObterPorId(int id)
