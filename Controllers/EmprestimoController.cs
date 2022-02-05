@@ -12,7 +12,6 @@ namespace Biblioteca.Controllers
         public IActionResult Cadastro()
         {
             Autenticacao.CheckLogin(this);
-            Autenticacao.verificaSeUsuarioEAdmin(this);
             
             LivroService livroService = new LivroService();
             EmprestimoService emprestimoService = new EmprestimoService();
@@ -39,11 +38,10 @@ namespace Biblioteca.Controllers
             return RedirectToAction("Listagem");
         }
 
-          public IActionResult Listagem(string tipoFiltro, string filtro)
+          public IActionResult Listagem(string tipoFiltro, string filtro, string itensPorPagina, int numDaPagina, int paginaAtual)
         {
             Autenticacao.CheckLogin(this);
-            Autenticacao.verificaSeUsuarioEAdmin(this);
-            
+                        
             FiltrosEmprestimos objFiltro = null;
             if(!string.IsNullOrEmpty(filtro))
             {
@@ -51,6 +49,10 @@ namespace Biblioteca.Controllers
                 objFiltro.Filtro = filtro;
                 objFiltro.TipoFiltro = tipoFiltro;
             }
+            
+            ViewData["livroPorPagina"] = (string.IsNullOrEmpty(itensPorPagina) ? 10 : int.Parse(itensPorPagina));
+            ViewData["PaginaAtual"] = (paginaAtual != 0 ? paginaAtual : 1);
+
             EmprestimoService emprestimoService = new EmprestimoService();
 
             return View(emprestimoService.ListarTodos(objFiltro));
