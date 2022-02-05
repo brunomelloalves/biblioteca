@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Biblioteca.Migrations
 {
     [DbContext(typeof(BibliotecaContext))]
-    [Migration("20220202164959_CreateDatabase")]
+    [Migration("20220203172656_CreateDatabase")]
     partial class CreateDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -52,3 +52,7 @@ D:\SENAC\UC 07\ATV01\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.csproj.CopyCo
 D:\SENAC\UC 07\ATV01\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.dll
 D:\SENAC\UC 07\ATV01\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
 D:\SENAC\UC 07\ATV01\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.genruntimeconfig.cache
+D:\SENAC\UC 07\ATV01\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ListaDeUsuarios.cshtml.g.cs
+D:\SENAC\UC 07\ATV01\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\editarUsuario.cshtml.g.cs
+D:\SENAC\UC 07\ATV01\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\RegistrarUsuarios.cshtml.g.cs
+D:\SENAC\UC 07\ATV01\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\NeedAdmin.cshtml.g.cs
